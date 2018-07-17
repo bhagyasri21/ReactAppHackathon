@@ -9,7 +9,7 @@ import Auth from './Auth';
 import Login from './Login';
 import Register from './Register';
 import HackathonDashboard from './HackathonDashboard';
-
+import HackathonDetails from './HackathonDetails';
 export default () => (
   <BrowserRouter>
     <Switch>
@@ -17,6 +17,7 @@ export default () => (
       <Route exact path="/register" render={props => <Register {...props} />} />
       <Route exact path="/auth" render={props => <Auth {...props} />} />
       <Route exact path="/hackathonList" render={props => <HackathonDashboard {...props} />} />
+      <Route path="/hack/:id" component={HackathonDetails}/>
     </Switch>
   </BrowserRouter>
 );

@@ -77,7 +77,12 @@ class Register extends React.Component {
           value={this.state.password} /><br/><br/>
         
         <br />
-        <Button onClick={() => this.onSubmit()} type="primary">Register</Button><div className="App-button"></div><span><Button type="primary"><Link to="/login" >Login</Link></Button></span>
+        <Button onClick={() => this.onSubmit()} type="primary"><Link
+                    to={"/hackathonList"}
+                    key={this.props.active}
+                    >
+                     Register
+                </Link></Button><div className="App-button"></div><span><Button type="primary"><Link to="/login" >Login</Link></Button></span>
        
       </div>
     );
